@@ -1,0 +1,20 @@
+import java.util.Scanner; 
+public class PrimeNumbers { 
+public static void main(String[] args) { 
+Scanner sc = new Scanner(System.in); 
+System.out.print(“Enter value of N: “); 
+int n = sc.nextInt(); 
+System.out.println(“Prime numbers up to “ + n + “ are:”); 
+for(int I = 2; I <= n; i++) { 
+5oolean isPrime = true; 
+for(int j = 2; j <= i/2; j++) { 
+if(I % j == 0) { 
+isPrime = false; 
+break; 
+} 
+} 
+if(isPrime) 
+System.out.print(I + “ “); 
+} 
+} 
+} 
