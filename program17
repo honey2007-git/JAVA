@@ -1,0 +1,38 @@
+Bank.java 
+class Bank { 
+double getInterestRate() { 
+return 0; 
+} 
+} 
+SBI.java 
+// Derived class 1 
+class SBI extends Bank { 
+double getInterestRate() { 
+return 6.5; 
+} 
+} 
+ICICI.java 
+// Derived class 2 
+class ICICI extends Bank { 
+double getInterestRate() { 
+return 7.0; 
+} 
+} 
+HDFC.java 
+// Derived class 3 
+class HDFC extends Bank { 
+double getInterestRate() { 
+return 6.8; 
+} 
+} 
+BankInterestDemo.java 
+public class BankInterestDemo { 
+public static void main(String[] args) { 
+SBI s = new SBI(); 
+ICICI I = new ICICI(); 
+HDFC h = new HDFC(); 
+System.out.println(“SBI Interest Rate: “ + s.getInterestRate() + “%”); 
+System.out.println(“ICICI Interest Rate: “ + i.getInterestRate() + “%”); 
+System.out.println(“HDFC Interest Rate: “ + h.getInterestRate() + “%”); 
+} 
+}
