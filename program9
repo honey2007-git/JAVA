@@ -1,0 +1,60 @@
+Employee.Java 
+import java.util.Scanner; 
+class Employee { 
+private int empNo, age; 
+private String empName; 
+private double basic, DA, HRA, CA, PT, IT, grossSalary; 
+// Constructor 
+Employee(int no, String name, int age, double basic, 
+double DA, double HRA, double CA, double PT, double IT) { 
+this.empNo = no; 
+this.empName = name; 
+this.age = age; 
+this.basic = basic; 
+this.DA = DA; 
+this.HRA = HRA; 
+this.CA = CA; 
+this.PT = PT; 
+this.IT = IT; 
+} 
+// Method to calculate salary 
+public void calculateSalary() { 
+grossSalary = basic + DA + HRA + CA – PT – IT; 
+} 
+// Display method 
+public void display() { 
+System.out.println(“\nEmployee Details”); 
+System.out.println(“Emp No: “ + empNo); 
+System.out.println(“Name: “ + empName); 
+System.out.println(“Age: “ + age); 
+System.out.println(“Gross Salary: “ + grossSalary); 
+} 
+} 
+EmployeeSalaryDemo.java 
+public class EmployeeSalaryDemo { 
+public static void main(String[] args) { 
+Scanner sc = new Scanner(System.in); 
+System.out.print(“Enter Employee No: “); 
+int no = sc.nextInt(); 
+sc.nextLine(); 
+System.out.print(“Enter Name: “); 
+String name = sc.nextLine(); 
+System.out.print(“Enter Age: “); 
+int age = sc.nextInt(); 
+System.out.print(“Enter Basic Salary: “); 
+double basic = sc.nextDouble(); 
+System.out.print(“Enter DA: “); 
+double DA = sc.nextDouble(); 
+System.out.print(“Enter HRA: “); 
+double HRA = sc.nextDouble(); 
+System.out.print(“Enter CA: “); 
+double CA = sc.nextDouble(); 
+System.out.print(“Enter PT: “); 
+double PT = sc.nextDouble(); 
+System.out.print(“Enter IT: “); 
+double IT = sc.nextDouble();
+Employee emp = new Employee(no, name, age, basic, DA, HRA, CA, PT, IT); 
+emp.calculateSalary(); 
+emp.display();
+}
+}
