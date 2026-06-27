@@ -2,8 +2,7 @@ import java.util.Scanner;
 // User defined exception 
 class LessBalanceException extends Exception { 
 LessBalanceException() { 
-super("Withdraw amount (Rs) is not valid. Minimum balance should 
-be Rs.500"); 
+super("Withdraw amount (Rs) is not valid. Minimum balance should be Rs.500"); 
 } 
 } 
 // Account class 
