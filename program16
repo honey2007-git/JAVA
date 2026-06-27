@@ -1,0 +1,46 @@
+Employee.java 
+import java.util.Scanner; 
+class Employee { 
+String name; 
+String date; // format: YYYY-MM-DD 
+// constructor 
+Employee(String n, String d) { 
+name = n; 
+date = d; 
+} 
+} 
+void display() { 
+System.out.println(name + “  -  “ + date); 
+} 
+EmployeeSortDemo.java 
+public class EmployeeSortDemo { 
+public static void main(String[] args) { 
+Scanner sc = new Scanner(System.in); 
+Employee[] emp = new Employee[10]; 
+System.out.println(“Enter Employee Name and Date of Appointment 
+(YYYY-MM-DD):”); 
+
+// input 
+for(int I = 0; I < 10; i++) { 
+System.out.print(“Employee “ + (i+1) + “ Name: “); 
+String name = sc.nextLine(); 
+System.out.print(“Appointment Date: “); 
+String date = sc.nextLine(); 
+emp[i] = new Employee(name, date); 
+} 
+// sorting by date (earliest first) 
+for(int I = 0; I < 9; i++) { 
+for(int j = I + 1; j < 10; j++) { 
+if(emp[i].date.compareTo(emp[j].date) > 0) { 
+Employee temp = emp[i]; 
+emp[i] = emp[j]; 
+emp[j] = temp; 
+} 
+} 
+} 
+System.out.println(“\nEmployees sorted by Seniority:”); 
+for(Employee e : emp) { 
+e.display(); 
+} 
+} 
+} 
