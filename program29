@@ -1,0 +1,19 @@
+import java.util.NavigableSet; 
+import java.util.TreeSet; 
+public class NavigableSetDemo { 
+public static void main(String[] args) { 
+NavigableSet<Integer> marks = new TreeSet<>(); 
+marks.add(55); 
+marks.add(65); 
+marks.add(75); 
+marks.add(85); 
+marks.add(95); 
+System.out.println("Student Marks: " + marks); 
+System.out.println("Marks just below 75: " + marks.lower(75)); 
+System.out.println("Marks less than or equal to 75: " + 
+marks.floor(75)); 
+System.out.println("Marks just above 75: " + marks.higher(75)); 
+System.out.println("Marks greater than or equal to 75: " + 
+marks.ceiling(75)); 
+} 
+} 
