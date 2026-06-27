@@ -1,0 +1,45 @@
+Person.java 
+class Person { 
+String name; 
+void setName(String n) { 
+name = n; 
+} 
+void showName() { 
+System.out.println(“Name: “ + name); 
+} 
+} 
+Employee.java 
+// Derived from Person 
+class Employee extends Person { 
+int empId; 
+void setEmployee(int id) { 
+empId = id; 
+} 
+} 
+Manager.java 
+void showEmployee() { 
+System.out.println(“Employee ID: “ + empId); 
+} 
+// Derived from Employee 
+class Manager extends Employee { 
+double salary; 
+void setSalary(double s) { 
+salary = s; 
+} 
+void showSalary() { 
+System.out.println(“Salary: “ + salary); 
+} 
+} 
+MultilevelInheritanceDemo.java 
+public class MultilevelInheritanceDemo { 
+public static void main(String[] args) { 
+Manager m = new Manager(); 
+m.setName(“Anjali”); 
+m.setEmployee(5001); 
+m.setSalary(65000); 
+System.out.println(“Manager Details”); 
+m.showName(); 
+m.showEmployee(); 
+m.showSalary(); 
+} 
+}
