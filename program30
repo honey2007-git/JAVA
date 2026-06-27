@@ -1,0 +1,19 @@
+import java.util.Queue; 
+import java.util.LinkedList; 
+public class QueueDemo { 
+public static void main(String[] args) { 
+// Creating Queue using LinkedList 
+Queue<String> students = new LinkedList<>(); 
+// Adding students to queue 
+students.add("Ravi"); 
+students.add("Anjali"); 
+students.add("Kiran"); 
+students.add("Meena"); 
+System.out.println("Students waiting in queue: " + students); 
+// Removing first student (FIFO) 
+System.out.println("Student boarded the bus: " + 
+students.remove()); 
+// Display queue after removal 
+System.out.println("Remaining students in queue: " + students); 
+} 
+}
