@@ -1,0 +1,21 @@
+import java.util.HashSet; 
+import java.util.Set; 
+public class SetDemo { 
+public static void main(String[] args) { 
+// Creating a Set using HashSet 
+Set<String> states = new HashSet<>(); 
+// Adding elements 
+states.add("Karnataka"); 
+states.add("Kerala"); 
+states.add("Tamil Nadu"); 
+states.add("Maharashtra"); 
+states.add("Karnataka"); // duplicate element 
+System.out.println("Indian States stored in Set:"); 
+// Display elements 
+for(String state : states) { 
+System.out.println(state); 
+} 
+// Display number of elements 
+System.out.println("\nTotal states stored: " + states.size());
+}
+}
