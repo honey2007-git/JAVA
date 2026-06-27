@@ -1,0 +1,29 @@
+import java.util.Scanner; 
+public class StringHandlingDemo { 
+public static void main(String[] args) { 
+Scanner sc = new Scanner(System.in); 
+// a) StringBuffer capacity 
+StringBuffer sb = new StringBuffer("Java"); 
+System.out.println("Initial StringBuffer: " + sb); 
+System.out.println("Capacity 
+of 
+sb.capacity()); 
+StringBuffer: 
+// b) Reverse string and convert to upper case 
+System.out.print("\nEnter a string: "); 
+String input = sc.nextLine(); 
+StringBuffer sb2 = new StringBuffer(input); 
+sb2.reverse(); 
+String result = sb2.toString().toUpperCase(); 
+" 
++ 
+System.out.println("Reversed String in Uppercase: " + 
+result); 
+// c) Append another string 
+System.out.print("\nEnter another string to append: "); 
+String appendStr = sc.nextLine(); 
+result = result + appendStr; 
+System.out.println("Final Result after appending: " + 
+result); 
+} 
+} 
