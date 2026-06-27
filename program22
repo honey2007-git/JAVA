@@ -1,0 +1,54 @@
+import java.util.Scanner; 
+// User defined exception 
+class QueueException extends Exception { 
+QueueException(String message) { 
+super(message); 
+} 
+} 
+class Queue { 
+int arr[] = new int[5]; 
+int front = -1, rear = -1; 
+void enqueue(int data) throws QueueException { 
+if (rear == arr.length - 1) { 
+throw new QueueException("Queue Overflow"); 
+} 
+if (front == -1) 
+front = 0; 
+} 
+} 
+rear++; 
+arr[rear] = data; 
+System.out.println("Inserted: " + data); 
+void dequeue() throws QueueException { 
+if (front == -1 || front > rear) { 
+throw new QueueException("Queue Underflow"); 
+} 
+System.out.println("Deleted: " + arr[front]); 
+front++; 
+void display() { 
+if (front == -1 || front > rear) { 
+System.out.println("Queue is Empty"); 
+return; 
+} 
+System.out.println("Queue Elements:"); 
+for (int i = front; i <= rear; i++) { 
+System.out.print(arr[i] + " "); 
+}
+System.out.println(); 
+} 
+} 
+public class QueueDemo { 
+public static void main(String[] args) { 
+Queue q = new Queue(); 
+try { 
+q.enqueue(10); 
+q.enqueue(20); 
+q.enqueue(30); 
+q.display(); 
+q.dequeue(); 
+q.display(); 
+} catch (QueueException e) { 
+System.out.println(e.getMessage()); 
+} 
+} 
+} 
