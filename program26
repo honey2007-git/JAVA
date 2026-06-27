@@ -1,0 +1,21 @@
+import java.util.ArrayList; 
+import java.util.List; 
+public class ListDemo { 
+public static void main(String[] args) { 
+// Creating a List using ArrayList 
+List<String> states = new ArrayList<>(); 
+// Adding elements 
+states.add("Karnataka"); 
+states.add("Kerala"); 
+states.add("Tamil Nadu"); 
+states.add("Maharashtra"); 
+states.add("Karnataka"); // duplicate element
+System.out.println("Indian States stored in List:");
+
+for(String state : states) { 
+System.out.println(state);
+}
+
+System.out.println("\nTotal states stored: " + states.size());
+}
+}
