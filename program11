@@ -1,0 +1,33 @@
+Square.java 
+package shape; 
+public class Square { 
+public double area(double side) { 
+return side * side; 
+} 
+} 
+Circle.java 
+package shape; 
+public class Circle { 
+public double area(double r) { 
+return 3.14 * r * r; 
+} 
+} 
+Triangle.java 
+package shape; 
+public class Triangle { 
+public double area(double base, double height) { 
+return 0.5 * base * height; 
+} 
+} 
+ShapeDemo.java 
+import shape.*; 
+public class ShapeDemo { 
+public static void main(String[] args) { 
+Square s = new Square(); 
+Circle c = new Circle(); 
+Triangle t = new Triangle(); 
+System.out.println(“Area of Square: “ + s.area(5)); 
+System.out.println(“Area of Circle: “ + c.area(3)); 
+System.out.println(“Area of Triangle: “ + t.area(4,6)); 
+} 
+} 
