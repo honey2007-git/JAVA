@@ -1,0 +1,15 @@
+Import java.util.Scanner; 
+class Greeting { 
+void displayMessage(String name) { 
+System.out.println(“Hello “ + name + “! Welcome to Java Lab.”); 
+} 
+} 
+public class GreetingDemo { 
+public static void main(String[] args) { 
+Scanner sc = new Scanner(System.in); 
+Greeting g = new Greeting();
+System.out.print(“Enter your name: “); 
+String name = sc.nextLine(); 
+g.displayMessage(name); 
+} 
+}
