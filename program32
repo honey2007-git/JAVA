@@ -1,0 +1,14 @@
+import java.util.LinkedList; 
+public class MailingAddressDemo { 
+public static void main(String[] args) { 
+LinkedList<String> addresses = new LinkedList<>(); 
+addresses.add("Ravi, 12 MG Road, Bengaluru"); 
+addresses.add("Anjali, 45 Market Road, Mysuru"); 
+addresses.add("Kiran, 21 Temple Street, Hubballi"); 
+addresses.add("Meena, 9 Gandhi Circle, Mangaluru"); 
+System.out.println("Mailing Addresses:"); 
+for(String addr : addresses) { 
+System.out.println(addr); 
+} 
+} 
+}
