@@ -1,0 +1,50 @@
+SalesExecutive.Java 
+import java.util.Scanner; 
+class SalesExecutive { 
+private int empNo; 
+private String empName; 
+private double q1, q2, q3, q4, totalSales, averageSales; 
+SalesExecutive(int no, String name, double q1, double q2, double 
+q3, double q4) { 
+this.empNo = no; 
+this.empName = name; 
+this.q1 = q1; 
+this.q2 = q2; 
+this.q3 = q3; 
+this.q4 = q4; 
+} 
+public void calculateSales() { 
+totalSales = q1 + q2 + q3 + q4; 
+averageSales = totalSales / 4; 
+} 
+public void displayReport() { 
+System.out.println(“\nSales Report”); 
+System.out.println(“Emp No: “ + empNo); 
+System.out.println(“Name: “ + empName); 
+System.out.println(“Total Sales: “ + totalSales); 
+System.out.println(“Average Sales: “ + averageSales); 
+} 
+} 
+SalesReportDemo.Java 
+public class SalesReportDemo { 
+public static void main(String[] args) { 
+Scanner sc = new Scanner(System.in); 
+System.out.print(“Enter Employee No: “); 
+int no = sc.nextInt(); 
+sc.nextLine(); 
+System.out.print(“Enter Name: “); 
+String name = sc.nextLine(); 
+System.out.print(“Enter Sales Q1: “); 
+double q1 = sc.nextDouble(); 
+System.out.print(“Enter Sales Q2: “); 
+double q2 = sc.nextDouble(); 
+System.out.print(“Enter Sales Q3: “); 
+double q3 = sc.nextDouble(); 
+System.out.print(“Enter Sales Q4: “); 
+double q4 = sc.nextDouble(); 
+SalesExecutive s = new SalesExecutive(no, name, q1, q2, q3, 
+q4); 
+} 
+} 
+s.calculateSales(); 
+s.displayReport(); 
