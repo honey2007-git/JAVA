@@ -1,0 +1,30 @@
+enum DayOfWeek { 
+SUNDAY, 
+MONDAY, 
+TUESDAY, 
+WEDNESDAY, 
+THURSDAY, 
+FRIDAY, 
+SATURDAY; 
+// Method to check workday 
+boolean isWorkDay() { 
+switch(this) { 
+case MONDAY: 
+case TUESDAY: 
+case WEDNESDAY: 
+case THURSDAY: 
+case FRIDAY: 
+return true; 
+default: 
+return false;
+}
+}
+}
+public class EnumDemo { 
+public static void main(String[] args) { 
+for (DayOfWeek day : DayOfWeek.values()) { 
+System.out.println(day + " : Workday = " + 
+day.isWorkDay()); 
+} 
+} 
+} 
