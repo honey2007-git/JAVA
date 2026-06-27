@@ -1,0 +1,19 @@
+import java.util.Deque; 
+import java.util.ArrayDeque; 
+public class DequeDemo { 
+public static void main(String[] args) { 
+Deque<String> coaches = new ArrayDeque<>(); 
+// Adding coaches from both ends 
+coaches.addFirst("Coach A"); 
+coaches.addLast("Coach B"); 
+coaches.addFirst("Coach C"); 
+coaches.addLast("Coach D"); 
+System.out.println("Train coaches: " + coaches); 
+// Removing coaches from both ends 
+System.out.println("Removed from front: " + 
+coaches.removeFirst()); 
+System.out.println("Removed from rear: " + 
+coaches.removeLast()); 
+System.out.println("Remaining coaches: " + coaches);
+}
+}
